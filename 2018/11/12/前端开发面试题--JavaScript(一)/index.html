@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="JavaScript,面试题,ES6,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="以下内容来自：https://www.cnblogs.com/fengxiongZz/p/8191503.html  ES6箭头函数  当要求动态上下文的时候，就不能够使用箭头函数，也就是   this 的固定化  在使用 ()=&amp;gt;{} 定义函数的时候，this 的指向是定义时所在的对象，而不是使用时所在的对象 不能够用作构造函数，即不能够使用 new 命令，否则就会抛出一个错误 不能够使">
+<meta name="keywords" content="JavaScript,面试题,ES6">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端开发面试题--JavaScript(一)">
+<meta property="og:url" content="http://restart-h.github.io/blog/2018/11/12/前端开发面试题--JavaScript(一)/index.html">
+<meta property="og:site_name" content="拂晓">
+<meta property="og:description" content="以下内容来自：https://www.cnblogs.com/fengxiongZz/p/8191503.html  ES6箭头函数  当要求动态上下文的时候，就不能够使用箭头函数，也就是   this 的固定化  在使用 ()=&amp;gt;{} 定义函数的时候，this 的指向是定义时所在的对象，而不是使用时所在的对象 不能够用作构造函数，即不能够使用 new 命令，否则就会抛出一个错误 不能够使">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-24T18:00:06.349Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端开发面试题--JavaScript(一)">
+<meta name="twitter:description" content="以下内容来自：https://www.cnblogs.com/fengxiongZz/p/8191503.html  ES6箭头函数  当要求动态上下文的时候，就不能够使用箭头函数，也就是   this 的固定化  在使用 ()=&amp;gt;{} 定义函数的时候，this 的指向是定义时所在的对象，而不是使用时所在的对象 不能够用作构造函数，即不能够使用 new 命令，否则就会抛出一个错误 不能够使">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://restart-h.github.io/blog/2018/11/12/前端开发面试题--JavaScript(一)/">
+
+
+
+
+
+  <title>前端开发面试题--JavaScript(一) | 拂晓</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">拂晓</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/blog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/blog/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://restart-h.github.io/blog/blog/2018/11/12/前端开发面试题--JavaScript(一)/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Restart-H">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="拂晓">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">前端开发面试题--JavaScript(一)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-12T18:47:45+08:00">
+                2018-11-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/面试题/" itemprop="url" rel="index">
+                    <span itemprop="name">面试题</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/面试题/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/面试题/JavaScript/ES6/" itemprop="url" rel="index">
+                    <span itemprop="name">ES6</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>以下内容来自：<a href="https://www.cnblogs.com/fengxiongZz/p/8191503.html" target="_blank" rel="noopener">https://www.cnblogs.com/fengxiongZz/p/8191503.html</a></p>
+</blockquote>
+<h3 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h3><h4 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h4><p>  当要求<code>动态上下文</code>的时候，就不能够使用箭头函数，也就是   this 的固定化</p>
+<ol>
+<li>在使用 <code>()=&gt;{}</code> 定义函数的时候，this 的指向是<code>定义时</code>所在的对象，而不是使用时所在的对象</li>
+<li>不能够用作构造函数，即不能够使用 <code>new</code> 命令，否则就会抛出一个错误</li>
+<li>不能够使用 <code>arguments</code> 对象</li>
+<li>不能使用 <code>yield</code> 命令 </li>
+</ol>
+<p>ex:<br>不使用箭头函数:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Boys&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span></span>()&#123;</span><br><span class="line">	  this.type=<span class="string">'Tom'</span>;</span><br><span class="line">	&#125;</span><br><span class="line">  say(val)&#123;</span><br><span class="line">      setTimeout(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">	    console.log(this);</span><br><span class="line">	    console.log(this.type + <span class="string">" says "</span> + val)</span><br><span class="line">    &#125;,1000)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">var boy = new Boys();</span><br><span class="line">boy.say(<span class="string">'hello'</span>); // undefined says hello</span><br></pre></td></tr></table></figure></p>
+<p>  Tips: 超时调用的代码都是在全局作用域中执行的, 因此函数中<code>this</code> 的值在非严格模式下指向 window 对象, 在严格模式下是 undefined. 也就是说在非严格模式下, setTimeout 中所执行函数中的 this, 永远指向 window<br>使用 ()=&gt;{}<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Girls&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span></span>()&#123;</span><br><span class="line">    this.type=<span class="string">'Lucy'</span>;</span><br><span class="line">	&#125;</span><br><span class="line">  say(val)&#123;</span><br><span class="line">      setTimeout(()=&gt;&#123;</span><br><span class="line">      console.log(this);</span><br><span class="line">      console.log(this.type + <span class="string">" says "</span> + val)</span><br><span class="line">    &#125;,1000)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">var girl = new Girls();</span><br><span class="line">girl.say(<span class="string">'hai'</span>); // Lucy says hai</span><br></pre></td></tr></table></figure></p>
+<h4 id="let和const"><a href="#let和const" class="headerlink" title="let和const"></a>let和const</h4><p>  <code>let</code> 是更完美的 var，不是全局变量，具有块级函数作用域,大多数情况不会发生<code>变量提升</code>。<br>  <code>const</code> 定义常量值，不能够重新赋值，如果值是一个对象，可以改变对象里边的属性值。</p>
+<ol>
+<li>let 声明的变量具有块级作用域</li>
+<li>let 声明的变量不能通过 window. 变量名进行访问</li>
+<li>形如 for(let x..) 的循环是每次迭代都为 x 创建新的绑定<br>var 带来的不合理场景<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var arr = [];</span><br><span class="line"><span class="keyword">for</span> (var i = 0; i &lt; 10; i++ )&#123;</span><br><span class="line">  arr[i] = <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    console.log(i)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">arr[3]() // 10</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>上述代码中, 变量 i 是 var 声明的, 在<code>全局范围</code>内都有效, 所以用来计数的循环变量<code>泄露</code>为全局变量. 所以每一次循环, 新的i值都会<code>覆盖旧值</code>, 导致最后输出都是10<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var arr2 = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">let</span> i = 0; i &lt; 10; i++)&#123;</span><br><span class="line">  arr[i] = <span class="function"><span class="title">function</span></span> ()&#123;</span><br><span class="line">    console.log(i)</span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br><span class="line">arr[3]() // 3</span><br></pre></td></tr></table></figure></p>
+<p>相当于简化闭包：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> exportNum(i)&#123;</span><br><span class="line">  <span class="built_in">return</span> <span class="function"><span class="title">function</span></span> ()&#123;</span><br><span class="line">    console.log(i)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">var a = [];</span><br><span class="line"><span class="keyword">for</span> ( var i = 0; i &lt; 5; i++ )&#123;</span><br><span class="line">  a[i] = exportNum(i)();</span><br><span class="line">&#125;</span><br><span class="line">// 循环输出 0, 1, 2, 3, 4</span><br></pre></td></tr></table></figure></p>
+<p>采用立即执行函数的闭包<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var a = [];</span><br><span class="line"><span class="keyword">for</span> ( var i = 0; i &lt; 5; i++ )&#123;</span><br><span class="line">  a[i] = (<span class="keyword">function</span> (val)&#123;</span><br><span class="line">    <span class="built_in">return</span> <span class="function"><span class="title">function</span></span> ()&#123;</span><br><span class="line">      console.log(val)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;(i));</span><br><span class="line">&#125;</span><br><span class="line">a[3](); // 3</span><br></pre></td></tr></table></figure></p>
+<h4 id="Set-数据结构"><a href="#Set-数据结构" class="headerlink" title="Set 数据结构"></a>Set 数据结构</h4><p>ES6 方法, Set 本身是一个构造函数, 类似于数组, 但<code>成员值唯一</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const <span class="built_in">set</span> = new Set([1,1,2,3,5,2,4])</span><br><span class="line">undefined</span><br><span class="line">console.log(...<span class="built_in">set</span>) // 1 2 3 5 4</span><br><span class="line">console.log(Array.from(new Set([2,2,3,3,5,7,7,9]))) //[2, 3, 5, 7, 9]</span><br></pre></td></tr></table></figure></p>
+<h4 id="Class-语法"><a href="#Class-语法" class="headerlink" title="Class 语法"></a>Class 语法</h4><p>class 语法相对<code>原型</code>, <code>构造函数</code>, <code>继承</code>更接近传统语法, 它的写法能够让对象原型的写法更加<code>清晰</code>, 更加<code>通俗</code><br>ex:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">class Animal&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span></span>()&#123;</span><br><span class="line">    this.type=<span class="string">'Lucy'</span>;</span><br><span class="line">	&#125;</span><br><span class="line">  say(val)&#123;</span><br><span class="line">      setTimeout(()=&gt;&#123;</span><br><span class="line">      console.log(this);</span><br><span class="line">      console.log(this.type + <span class="string">" says "</span> + val)</span><br><span class="line">    &#125;,1000)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">let</span> animal = new Animal();</span><br><span class="line">animal.say(<span class="string">'hai'</span>); // Lucy says hai</span><br><span class="line"></span><br><span class="line">class Cat extends Animal &#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span></span>()&#123;</span><br><span class="line">    super()</span><br><span class="line">    this.type = <span class="string">"cat"</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">let</span> cat = new Cat();</span><br><span class="line">cat.say(<span class="string">'hai'</span>); //cat says hai</span><br></pre></td></tr></table></figure></p>
+<p>使用 <code>extend</code> 的时候结构输出是 cat says hello 而不是animal says hello, 说明 <code>contructor</code> 内部定义的方法和属性是实例对象自己的, 不能通过 <code>extends</code> 进行继承;<br>在 class cat 中出现了 <code>super()</code>, 是因为在 ES6 中，子类的构造函数必须含有 super 函数, super 表示的是调用父类的构造函数, 虽然是父类的构造函数, 但是 this 指向的却是 cat </p>
+<h4 id="模板字符串"><a href="#模板字符串" class="headerlink" title="模板字符串"></a>模板字符串</h4><p>${ varible }, 以往连接字符串和变量的时候需要使用字符串拼接 <code>&#39;string&#39; + varible + &#39;string&#39;</code> 但是有了模版语言后我们可以使用 string${varible}string 进行<code>简化</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//es5 </span><br><span class="line">var name = <span class="string">'Tom'</span>;</span><br><span class="line">console.log(<span class="string">'hello '</span> + name); // hello Tom</span><br><span class="line"></span><br><span class="line">var tem = <span class="string">'hello \</span></span><br><span class="line"><span class="string">world'</span>; </span><br><span class="line">console.log(tem); // hello world</span><br><span class="line"></span><br><span class="line">//es6</span><br><span class="line">const name = <span class="string">'Tom'</span>;</span><br><span class="line">console.log(`hello <span class="variable">$&#123;name&#125;</span>`); //hello Tom</span><br><span class="line"></span><br><span class="line">const tem = `hello</span><br><span class="line">world`;</span><br><span class="line">console.log(tem); // hello 换行 world</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/blog/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/blog/tags/面试题/" rel="tag"># 面试题</a>
+          
+            <a href="/blog/tags/ES6/" rel="tag"># ES6</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2018/11/05/前端开发面试题--CSS(一)/" rel="next" title="前端开发面试题--CSS(一)">
+                <i class="fa fa-chevron-left"></i> 前端开发面试题--CSS(一)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2018/11/20/JavaScript功能函数/" rel="prev" title="JavaScript功能函数">
+                JavaScript功能函数 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Restart-H</p>
+              <p class="site-description motion-element" itemprop="description">黎明就在眼前</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/blog/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Restart-H" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#ES6"><span class="nav-number">1.</span> <span class="nav-text">ES6</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#箭头函数"><span class="nav-number">1.1.</span> <span class="nav-text">箭头函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#let和const"><span class="nav-number">1.2.</span> <span class="nav-text">let和const</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Set-数据结构"><span class="nav-number">1.3.</span> <span class="nav-text">Set 数据结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Class-语法"><span class="nav-number">1.4.</span> <span class="nav-text">Class 语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模板字符串"><span class="nav-number">1.5.</span> <span class="nav-text">模板字符串</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Restart-H</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
