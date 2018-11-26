@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="CSS,面试题,前端,">
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="黎明就在眼前">
-<meta property="og:type" content="website">
-<meta property="og:title" content="拂晓">
-<meta property="og:url" content="http://restart-h.github.io/index.html">
+<meta name="description" content="以下内容来自：https://segmentfault.com/a/1190000013325778  介绍CSS盒模型, 与低版本IE的盒模型有何不同?1234标准盒子模型：  宽度 = 内容长度(content) + border + padding + margin12低版本IE盒子模型：  宽度 = 内容长度(content + border + padding) + margin bo">
+<meta name="keywords" content="CSS,面试题,前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端开发面试题--CSS(一)">
+<meta property="og:url" content="http://restart-h.github.io/2018/11/05/前端开发面试题-CSS-一/index.html">
 <meta property="og:site_name" content="拂晓">
-<meta property="og:description" content="黎明就在眼前">
+<meta property="og:description" content="以下内容来自：https://segmentfault.com/a/1190000013325778  介绍CSS盒模型, 与低版本IE的盒模型有何不同?1234标准盒子模型：  宽度 = 内容长度(content) + border + padding + margin12低版本IE盒子模型：  宽度 = 内容长度(content + border + padding) + margin bo">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-24T08:07:17.217Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="拂晓">
-<meta name="twitter:description" content="黎明就在眼前">
+<meta name="twitter:title" content="前端开发面试题--CSS(一)">
+<meta name="twitter:description" content="以下内容来自：https://segmentfault.com/a/1190000013325778  介绍CSS盒模型, 与低版本IE的盒模型有何不同?1234标准盒子模型：  宽度 = 内容长度(content) + border + padding + margin12低版本IE盒子模型：  宽度 = 内容长度(content + border + padding) + margin bo">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://restart-h.github.io/">
+  <link rel="canonical" href="http://restart-h.github.io/2018/11/05/前端开发面试题-CSS-一/">
 
 
 
 
 
-  <title>拂晓</title>
+  <title>前端开发面试题--CSS(一) | 拂晓</title>
   
 
 
@@ -143,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -217,341 +218,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://restart-h.github.io/2018/11/20/JavaScript功能函数/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Restart-H">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="拂晓">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/20/JavaScript功能函数/" itemprop="url">JavaScript功能函数</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-20T10:36:00+08:00">
-                2018-11-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="判断数据类型"><a href="#判断数据类型" class="headerlink" title="判断数据类型"></a>判断数据类型</h3><p>用 . 访问<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Object.prototype.dataType = <span class="function"><span class="title">function</span></span> ()&#123;</span><br><span class="line">  <span class="built_in">let</span> toStr = Object.prototype.toString.call(this);</span><br><span class="line">  <span class="built_in">return</span> `is <span class="variable">$&#123;toStr.slice(8,-1)&#125;</span>`</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>直接使用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> dataType (arg)&#123;</span><br><span class="line">  <span class="built_in">let</span> toStr = Object.prototype.toString.call(arg);</span><br><span class="line">  <span class="built_in">return</span> `is <span class="variable">$&#123;toStr.slice(8,-1)&#125;</span>`</span><br><span class="line">&#125;</span><br><span class="line">dataType(); // <span class="string">"is Undefined"</span></span><br><span class="line">dataType(null); // <span class="string">"is Null"</span></span><br><span class="line">dataType(undefined); // <span class="string">"is Undefined"</span></span><br><span class="line">dataType(1); // <span class="string">"is Number"</span></span><br><span class="line">dataType(<span class="string">''</span>); // <span class="string">"is String"</span></span><br><span class="line">dataType([]); // <span class="string">"is Array"</span></span><br><span class="line">dataType(&#123;&#125;); // <span class="string">"is Object"</span></span><br><span class="line">dataType(Object); // <span class="string">"is Function"</span></span><br><span class="line">dataType(new Object()); // <span class="string">"is Object"</span></span><br><span class="line">dataType(new Object); // <span class="string">"is Object"</span></span><br><span class="line">dataType(new Set()); // <span class="string">"is Set"</span></span><br><span class="line">dataType(new Map()); // <span class="string">"is Map"</span></span><br><span class="line">dataType(Symbol()); // <span class="string">"is Symbol"</span></span><br><span class="line">dataType(new RegExp); // <span class="string">"is RegExp"</span></span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://restart-h.github.io/2018/11/12/前端开发面试题-JavaScript-一/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Restart-H">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="拂晓">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/12/前端开发面试题-JavaScript-一/" itemprop="url">前端开发面试题--JavaScript(一)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-12T18:47:45+08:00">
-                2018-11-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/面试题/" itemprop="url" rel="index">
-                    <span itemprop="name">面试题</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/面试题/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/面试题/JavaScript/ES6/" itemprop="url" rel="index">
-                    <span itemprop="name">ES6</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>以下内容来自：<a href="https://www.cnblogs.com/fengxiongZz/p/8191503.html" target="_blank" rel="noopener">https://www.cnblogs.com/fengxiongZz/p/8191503.html</a></p>
-</blockquote>
-<h3 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h3><h4 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h4><p>  当要求<code>动态上下文</code>的时候，就不能够使用箭头函数，也就是   this 的固定化</p>
-<ol>
-<li>在使用 <code>()=&gt;{}</code> 定义函数的时候，this 的指向是<code>定义时</code>所在的对象，而不是使用时所在的对象</li>
-<li>不能够用作构造函数，即不能够使用 <code>new</code> 命令，否则就会抛出一个错误</li>
-<li>不能够使用 <code>arguments</code> 对象</li>
-<li>不能使用 <code>yield</code> 命令 </li>
-</ol>
-<p>ex:<br>不使用箭头函数:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Boys&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span></span>()&#123;</span><br><span class="line">	  this.type=<span class="string">'Tom'</span>;</span><br><span class="line">	&#125;</span><br><span class="line">  say(val)&#123;</span><br><span class="line">      setTimeout(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">	    console.log(this);</span><br><span class="line">	    console.log(this.type + <span class="string">" says "</span> + val)</span><br><span class="line">    &#125;,1000)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">var boy = new Boys();</span><br><span class="line">boy.say(<span class="string">'hello'</span>); // undefined says hello</span><br></pre></td></tr></table></figure></p>
-<p>  Tips: 超时调用的代码都是在全局作用域中执行的, 因此函数中<code>this</code> 的值在非严格模式下指向 window 对象, 在严格模式下是 undefined. 也就是说在非严格模式下, setTimeout 中所执行函数中的 this, 永远指向 window<br>使用 ()=&gt;{}<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Girls&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span></span>()&#123;</span><br><span class="line">    this.type=<span class="string">'Lucy'</span>;</span><br><span class="line">	&#125;</span><br><span class="line">  say(val)&#123;</span><br><span class="line">      setTimeout(()=&gt;&#123;</span><br><span class="line">      console.log(this);</span><br><span class="line">      console.log(this.type + <span class="string">" says "</span> + val)</span><br><span class="line">    &#125;,1000)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">var girl = new Girls();</span><br><span class="line">girl.say(<span class="string">'hai'</span>); // Lucy says hai</span><br></pre></td></tr></table></figure></p>
-<h4 id="let和const"><a href="#let和const" class="headerlink" title="let和const"></a>let和const</h4><p>  <code>let</code> 是更完美的 var，不是全局变量，具有块级函数作用域,大多数情况不会发生<code>变量提升</code>。<br>  <code>const</code> 定义常量值，不能够重新赋值，如果值是一个对象，可以改变对象里边的属性值。</p>
-<ol>
-<li>let 声明的变量具有块级作用域</li>
-<li>let 声明的变量不能通过 window. 变量名进行访问</li>
-<li>形如 for(let x..) 的循环是每次迭代都为 x 创建新的绑定<br>var 带来的不合理场景<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var arr = [];</span><br><span class="line"><span class="keyword">for</span> (var i = 0; i &lt; 10; i++ )&#123;</span><br><span class="line">  arr[i] = <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    console.log(i)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">arr[3]() // 10</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>上述代码中, 变量 i 是 var 声明的, 在<code>全局范围</code>内都有效, 所以用来计数的循环变量<code>泄露</code>为全局变量. 所以每一次循环, 新的i值都会<code>覆盖旧值</code>, 导致最后输出都是10<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var arr2 = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">let</span> i = 0; i &lt; 10; i++)&#123;</span><br><span class="line">  arr[i] = <span class="function"><span class="title">function</span></span> ()&#123;</span><br><span class="line">    console.log(i)</span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br><span class="line">arr[3]() // 3</span><br></pre></td></tr></table></figure></p>
-<p>相当于简化闭包：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> exportNum(i)&#123;</span><br><span class="line">  <span class="built_in">return</span> <span class="function"><span class="title">function</span></span> ()&#123;</span><br><span class="line">    console.log(i)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">var a = [];</span><br><span class="line"><span class="keyword">for</span> ( var i = 0; i &lt; 5; i++ )&#123;</span><br><span class="line">  a[i] = exportNum(i)();</span><br><span class="line">&#125;</span><br><span class="line">// 循环输出 0, 1, 2, 3, 4</span><br></pre></td></tr></table></figure></p>
-<p>采用立即执行函数的闭包<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var a = [];</span><br><span class="line"><span class="keyword">for</span> ( var i = 0; i &lt; 5; i++ )&#123;</span><br><span class="line">  a[i] = (<span class="keyword">function</span> (val)&#123;</span><br><span class="line">    <span class="built_in">return</span> <span class="function"><span class="title">function</span></span> ()&#123;</span><br><span class="line">      console.log(val)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;(i));</span><br><span class="line">&#125;</span><br><span class="line">a[3](); // 3</span><br></pre></td></tr></table></figure></p>
-<h4 id="Set-数据结构"><a href="#Set-数据结构" class="headerlink" title="Set 数据结构"></a>Set 数据结构</h4><p>ES6 方法, Set 本身是一个构造函数, 类似于数组, 但<code>成员值唯一</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const <span class="built_in">set</span> = new Set([1,1,2,3,5,2,4])</span><br><span class="line">undefined</span><br><span class="line">console.log(...<span class="built_in">set</span>) // 1 2 3 5 4</span><br><span class="line">console.log(Array.from(new Set([2,2,3,3,5,7,7,9]))) //[2, 3, 5, 7, 9]</span><br></pre></td></tr></table></figure></p>
-<h4 id="Class-语法"><a href="#Class-语法" class="headerlink" title="Class 语法"></a>Class 语法</h4><p>class 语法相对<code>原型</code>, <code>构造函数</code>, <code>继承</code>更接近传统语法, 它的写法能够让对象原型的写法更加<code>清晰</code>, 更加<code>通俗</code><br>ex:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">class Animal&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span></span>()&#123;</span><br><span class="line">    this.type=<span class="string">'Lucy'</span>;</span><br><span class="line">	&#125;</span><br><span class="line">  say(val)&#123;</span><br><span class="line">      setTimeout(()=&gt;&#123;</span><br><span class="line">      console.log(this);</span><br><span class="line">      console.log(this.type + <span class="string">" says "</span> + val)</span><br><span class="line">    &#125;,1000)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">let</span> animal = new Animal();</span><br><span class="line">animal.say(<span class="string">'hai'</span>); // Lucy says hai</span><br><span class="line"></span><br><span class="line">class Cat extends Animal &#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span></span>()&#123;</span><br><span class="line">    super()</span><br><span class="line">    this.type = <span class="string">"cat"</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">let</span> cat = new Cat();</span><br><span class="line">cat.say(<span class="string">'hai'</span>); //cat says hai</span><br></pre></td></tr></table></figure></p>
-<p>使用 <code>extend</code> 的时候结构输出是 cat says hello 而不是animal says hello, 说明 <code>contructor</code> 内部定义的方法和属性是实例对象自己的, 不能通过 <code>extends</code> 进行继承;<br>在 class cat 中出现了 <code>super()</code>, 是因为在 ES6 中，子类的构造函数必须含有 super 函数, super 表示的是调用父类的构造函数, 虽然是父类的构造函数, 但是 this 指向的却是 cat </p>
-<h4 id="模板字符串"><a href="#模板字符串" class="headerlink" title="模板字符串"></a>模板字符串</h4><p>${ varible }, 以往连接字符串和变量的时候需要使用字符串拼接 <code>&#39;string&#39; + varible + &#39;string&#39;</code> 但是有了模版语言后我们可以使用 string${varible}string 进行<code>简化</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//es5 </span><br><span class="line">var name = <span class="string">'Tom'</span>;</span><br><span class="line">console.log(<span class="string">'hello '</span> + name); // hello Tom</span><br><span class="line"></span><br><span class="line">var tem = <span class="string">'hello \</span></span><br><span class="line"><span class="string">world'</span>; </span><br><span class="line">console.log(tem); // hello world</span><br><span class="line"></span><br><span class="line">//es6</span><br><span class="line">const name = <span class="string">'Tom'</span>;</span><br><span class="line">console.log(`hello <span class="variable">$&#123;name&#125;</span>`); //hello Tom</span><br><span class="line"></span><br><span class="line">const tem = `hello</span><br><span class="line">world`;</span><br><span class="line">console.log(tem); // hello 换行 world</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -581,9 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/05/前端开发面试题-CSS-一/" itemprop="url">前端开发面试题--CSS(一)</a></h1>
+          <h1 class="post-title" itemprop="name headline">前端开发面试题--CSS(一)</h1>
         
 
         <div class="post-meta">
@@ -666,9 +333,7 @@
       
 
       
-        
-          
-            <blockquote>
+        <blockquote>
 <p>以下内容来自：<a href="https://segmentfault.com/a/1190000013325778" target="_blank" rel="noopener">https://segmentfault.com/a/1190000013325778</a></p>
 </blockquote>
 <h3 id="介绍CSS盒模型-与低版本IE的盒模型有何不同"><a href="#介绍CSS盒模型-与低版本IE的盒模型有何不同" class="headerlink" title="介绍CSS盒模型, 与低版本IE的盒模型有何不同?"></a>介绍CSS盒模型, 与低版本IE的盒模型有何不同?</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">标准盒子模型：</span><br><span class="line">  宽度 = 内容长度(content) + border + padding + margin12</span><br><span class="line">低版本IE盒子模型：</span><br><span class="line">  宽度 = 内容长度(content + border + padding) + margin</span><br></pre></td></tr></table></figure>
@@ -717,8 +382,6 @@
 <h3 id="CSS属性overflow属性定义溢出元素内容区的内容会如何处理"><a href="#CSS属性overflow属性定义溢出元素内容区的内容会如何处理" class="headerlink" title="CSS属性overflow属性定义溢出元素内容区的内容会如何处理?"></a>CSS属性overflow属性定义溢出元素内容区的内容会如何处理?</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">scroll 出现滚动条</span><br><span class="line">auto 子元素内容大于父元素时出现滚动条</span><br><span class="line">visible 溢出的内容出现在父元素之外</span><br><span class="line">hidden 溢出隐藏</span><br></pre></td></tr></table></figure>
 <h3 id="CSS-Sprite"><a href="#CSS-Sprite" class="headerlink" title="CSS Sprite?"></a>CSS Sprite?</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">将一个页面涉及到不轻易改的图片包含到一张大图中去, 然后利用CSS的background-image, background-repeat, background-position的组合进行背景定位</span><br><span class="line">利用CSS Sprites 能很好地减少网页的HTTP请求, 从而大大的提高页面的性能; CSS Sprites能减少图片的字节</span><br></pre></td></tr></table></figure>
 
-          
-        
       
     </div>
     
@@ -733,14 +396,40 @@
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/CSS/" rel="tag"># CSS</a>
+          
+            <a href="/tags/面试题/" rel="tag"># 面试题</a>
+          
+            <a href="/tags/前端/" rel="tag"># 前端</a>
+          
+        </div>
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/12/前端开发面试题-JavaScript-一/" rel="prev" title="前端开发面试题--JavaScript(一)">
+                前端开发面试题--JavaScript(一) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </div>
@@ -750,10 +439,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -761,6 +451,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -781,8 +475,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -852,6 +555,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍CSS盒模型-与低版本IE的盒模型有何不同"><span class="nav-number">1.</span> <span class="nav-text">介绍CSS盒模型, 与低版本IE的盒模型有何不同?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#box-sizing-属性"><span class="nav-number">2.</span> <span class="nav-text">box-sizing 属性?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS选择器有哪些-哪些是可以继承的"><span class="nav-number">3.</span> <span class="nav-text">CSS选择器有哪些? 哪些是可以继承的?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS优先级算法如何计算"><span class="nav-number">4.</span> <span class="nav-text">CSS优先级算法如何计算?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS3新增的伪类"><span class="nav-number">5.</span> <span class="nav-text">CSS3新增的伪类?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何居中一个div"><span class="nav-number">6.</span> <span class="nav-text">如何居中一个div</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#display有哪些值"><span class="nav-number">7.</span> <span class="nav-text">display有哪些值?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#position的值"><span class="nav-number">8.</span> <span class="nav-text">position的值?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS3有哪些新特性"><span class="nav-number">9.</span> <span class="nav-text">CSS3有哪些新特性?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解释-CSS3-的-flexbox-弹性和布局模型-以及使用场景"><span class="nav-number">10.</span> <span class="nav-text">解释 CSS3 的 flexbox(弹性和布局模型), 以及使用场景?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用-纯CSS-创建一个三角形的原理是什么"><span class="nav-number">11.</span> <span class="nav-text">用 纯CSS 创建一个三角形的原理是什么?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一个满屏’品’字布局如何设计"><span class="nav-number">12.</span> <span class="nav-text">一个满屏’品’字布局如何设计?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见的兼容问题"><span class="nav-number">13.</span> <span class="nav-text">常见的兼容问题?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要初始化CSS样式"><span class="nav-number">14.</span> <span class="nav-text">为什么要初始化CSS样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#absolute-的-containing-bock-计算方式和正常流有何不同"><span class="nav-number">15.</span> <span class="nav-text">absolute 的 containing bock 计算方式和正常流有何不同?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS里的-visibility-属性有个-collapse-属性值-在不同浏览器下有什么区别"><span class="nav-number">16.</span> <span class="nav-text">CSS里的 visibility 属性有个 collapse 属性值, 在不同浏览器下有什么区别?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#display-none-和-display-hidden-的区别"><span class="nav-number">17.</span> <span class="nav-text">display: none 和 display: hidden 的区别?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#position-跟-display、overflow、float这些特性相互叠加后悔怎样"><span class="nav-number">18.</span> <span class="nav-text">position 跟 display、overflow、float这些特性相互叠加后悔怎样?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对-BFC-块级格式化上下文：block-formatting-context-规范的理解"><span class="nav-number">19.</span> <span class="nav-text">对 BFC(块级格式化上下文：block formatting context)规范的理解?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么会出现浮动和什么时候需要清除浮动-清除浮动的方式"><span class="nav-number">20.</span> <span class="nav-text">为什么会出现浮动和什么时候需要清除浮动, 清除浮动的方式?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上下-margin-重合的问题"><span class="nav-number">21.</span> <span class="nav-text">上下 margin 重合的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置元素浮动后-该元素的-display-值"><span class="nav-number">22.</span> <span class="nav-text">设置元素浮动后, 该元素的 display 值?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#媒体查询"><span class="nav-number">23.</span> <span class="nav-text">媒体查询?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS预处理器"><span class="nav-number">24.</span> <span class="nav-text">CSS预处理器?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS优化-提高性能的方法有哪些"><span class="nav-number">25.</span> <span class="nav-text">CSS优化, 提高性能的方法有哪些?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器是怎样解析CSS选择器的"><span class="nav-number">26.</span> <span class="nav-text">浏览器是怎样解析CSS选择器的?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在网页中应该使用奇数还是偶数的字体-why"><span class="nav-number">27.</span> <span class="nav-text">在网页中应该使用奇数还是偶数的字体? why?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#margin-和-padding-分别适合什么场景使用"><span class="nav-number">28.</span> <span class="nav-text">margin 和 padding 分别适合什么场景使用?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#元素竖向的百分比设定是相对于容器的高度吗"><span class="nav-number">29.</span> <span class="nav-text">元素竖向的百分比设定是相对于容器的高度吗?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全屏滚动的原理是什么-用到了-CSS-的哪些属性"><span class="nav-number">30.</span> <span class="nav-text">全屏滚动的原理是什么? 用到了 CSS 的哪些属性?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#响应式设计的基本原理-如何兼容低版本IE"><span class="nav-number">31.</span> <span class="nav-text">响应式设计的基本原理, 如何兼容低版本IE?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#视差滚动效果"><span class="nav-number">32.</span> <span class="nav-text">视差滚动效果?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#before-he-after-中双冒号和但冒号有什么区别-这两个伪元素的作用"><span class="nav-number">33.</span> <span class="nav-text">::before he :after 中双冒号和但冒号有什么区别? 这两个伪元素的作用?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对line-height是如何理解的"><span class="nav-number">34.</span> <span class="nav-text">对line-height是如何理解的?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#怎样让Chrome支持小于12px的文字"><span class="nav-number">35.</span> <span class="nav-text">怎样让Chrome支持小于12px的文字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#让页面里的字体变清晰-变细用CSS怎么做"><span class="nav-number">36.</span> <span class="nav-text">让页面里的字体变清晰, 变细用CSS怎么做?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#position-fixed-在-Android-下无效怎么处理"><span class="nav-number">37.</span> <span class="nav-text">position: fixed; 在 Android 下无效怎么处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如果需要手动写动画-你认为最小时间间隔是多久-为什么"><span class="nav-number">38.</span> <span class="nav-text">如果需要手动写动画, 你认为最小时间间隔是多久, 为什么?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#li-与-li-之间有看不见的空白间隔是什么原因引起的-如何解决"><span class="nav-number">39.</span> <span class="nav-text">li 与 li 之间有看不见的空白间隔是什么原因引起的? 如何解决?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#display-inline-block-时候会显示间隙"><span class="nav-number">40.</span> <span class="nav-text">display: inline-block 时候会显示间隙?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有一个高度自适应的-div-里面有两个-div-一个高度100px-希望另一个填满剩下的高度"><span class="nav-number">41.</span> <span class="nav-text">有一个高度自适应的 div, 里面有两个 div, 一个高度100px, 希望另一个填满剩下的高度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#png-jpg-gif-这些图片格式解释一下-分别什么时候用-有没有了解过-webp"><span class="nav-number">42.</span> <span class="nav-text">png, jpg, gif 这些图片格式解释一下, 分别什么时候用, 有没有了解过 webp?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#style标签写在body后与body前有什么区别"><span class="nav-number">43.</span> <span class="nav-text">style标签写在body后与body前有什么区别?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS属性overflow属性定义溢出元素内容区的内容会如何处理"><span class="nav-number">44.</span> <span class="nav-text">CSS属性overflow属性定义溢出元素内容区的内容会如何处理?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS-Sprite"><span class="nav-number">45.</span> <span class="nav-text">CSS Sprite?</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -992,6 +711,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
