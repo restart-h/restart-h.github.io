@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="腾讯123456789body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select&amp;#123;margin:0;padding:0&amp;#125;body&amp;#123;font:12px &quot;宋体&quot;,&quot;Arial Narrow&quot;,HELVETICA;background:#fff;-webkit-">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css样式重置">
+<meta property="og:url" content="http://restart-h.github.io/2018/12/08/css样式重置/index.html">
+<meta property="og:site_name" content="拂晓">
+<meta property="og:description" content="腾讯123456789body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select&amp;#123;margin:0;padding:0&amp;#125;body&amp;#123;font:12px &quot;宋体&quot;,&quot;Arial Narrow&quot;,HELVETICA;background:#fff;-webkit-">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-08T05:10:58.757Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="css样式重置">
+<meta name="twitter:description" content="腾讯123456789body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select&amp;#123;margin:0;padding:0&amp;#125;body&amp;#123;font:12px &quot;宋体&quot;,&quot;Arial Narrow&quot;,HELVETICA;background:#fff;-webkit-">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://restart-h.github.io/2018/12/08/css样式重置/">
+
+
+
+
+
+  <title>css样式重置 | 拂晓</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">拂晓</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://restart-h.github.io/2018/12/08/css样式重置/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Restart-H">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="拂晓">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">css样式重置</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-08T12:05:20+08:00">
+                2018-12-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="腾讯"><a href="#腾讯" class="headerlink" title="腾讯"></a>腾讯</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select&#123;margin:0;padding:0&#125;</span><br><span class="line">body&#123;font:12px <span class="string">"宋体"</span>,<span class="string">"Arial Narrow"</span>,HELVETICA;background:<span class="comment">#fff;-webkit-text-size-adjust:100%&#125;</span></span><br><span class="line">a&#123;color:<span class="comment">#172c45;text-decoration:none&#125;</span></span><br><span class="line">a:hover&#123;color:<span class="comment">#cd0200;text-decoration:underline&#125;</span></span><br><span class="line">em&#123;font-style:normal&#125;</span><br><span class="line">li&#123;list-style:none&#125;</span><br><span class="line">img&#123;border:0;vertical-align:middle&#125;</span><br><span class="line">table&#123;border-collapse:collapse;border-spacing:0&#125;</span><br><span class="line">p&#123;word-wrap:<span class="built_in">break</span>-word&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="百度"><a href="#百度" class="headerlink" title="百度"></a>百度</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td&#123;margin:0;padding:0&#125;</span><br><span class="line">html&#123;color:<span class="comment">#000;overflow-y:scroll;overflow:-moz-scrollbars-vertical&#125;</span></span><br><span class="line">body,button,input,select,textarea&#123;font-size:12px;font-family:arial,<span class="string">'Hiragino Sans GB'</span>,<span class="string">'Microsoft Yahei'</span>,<span class="string">'微软雅黑'</span>,<span class="string">'宋体'</span>,\5b8b\4f53,Tahoma,Arial,Helvetica,STHeiti&#125;</span><br><span class="line">h1,h2,h3,h4,h5,h6&#123;font-size:100%&#125;</span><br><span class="line">em&#123;font-style:normal&#125;</span><br><span class="line">small&#123;font-size:12px&#125;</span><br><span class="line">ul,ol&#123;list-style:none&#125;</span><br><span class="line">a&#123;text-decoration:none&#125;</span><br><span class="line">a:hover&#123;text-decoration:underline&#125;</span><br><span class="line">legend&#123;color:<span class="comment">#000&#125;</span></span><br><span class="line">fieldset,img&#123;border:0&#125;</span><br><span class="line">button,input,select,textarea&#123;font-size:100%&#125;</span><br><span class="line">table&#123;border-collapse:collapse;border-spacing:0&#125;</span><br><span class="line">img&#123;-ms-interpolation-mode:bicubic&#125;</span><br><span class="line">textarea&#123;resize:vertical&#125;</span><br><span class="line">.left&#123;<span class="built_in">float</span>:left&#125;</span><br><span class="line">.right&#123;<span class="built_in">float</span>:right&#125;</span><br><span class="line">.overflow&#123;overflow:hidden&#125;</span><br><span class="line">.hide&#123;display:none&#125;</span><br><span class="line">.block&#123;display:block&#125;</span><br><span class="line">.inline&#123;display:inline&#125;</span><br><span class="line">.error&#123;color:<span class="comment">#F00;font-size:12px&#125;</span></span><br><span class="line">label,button&#123;cursor:pointer&#125;</span><br><span class="line">.clearfix:after&#123;content:<span class="string">'\20'</span>;display:block;height:0;clear:both&#125;</span><br><span class="line">.clearfix&#123;zoom:1&#125;.clear&#123;clear:both;height:0;line-height:0;font-size:0;visibility:hidden;overflow:hidden&#125;</span><br><span class="line">.wordwrap&#123;word-break:<span class="built_in">break</span>-all;word-wrap:<span class="built_in">break</span>-word&#125;</span><br><span class="line">pre.wordwrap&#123;white-space:pre-wrap&#125;</span><br><span class="line">body&#123;text-align:center&#125;</span><br><span class="line">body,form&#123;position:relative&#125;</span><br><span class="line">td&#123;text-align:left&#125;</span><br><span class="line">img&#123;border:0&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="新浪"><a href="#新浪" class="headerlink" title="新浪"></a>新浪</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">/* 初始化CSS */</span><br><span class="line">html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img &#123; margin:0; padding:0; &#125;</span><br><span class="line">fieldset, img &#123; border:none; &#125;</span><br><span class="line">img&#123;display: block;&#125;</span><br><span class="line">address, caption, cite, code, dfn, th, var &#123; font-style:normal; font-weight:normal; &#125;</span><br><span class="line">ul, ol &#123; list-style:none; &#125;</span><br><span class="line">input &#123; padding-top:0; padding-bottom:0; font-family: <span class="string">"SimSun"</span>,<span class="string">"宋体"</span>;&#125;</span><br><span class="line">input::-moz-focus-inner &#123; border:none; padding:0; &#125;</span><br><span class="line">select, input &#123; vertical-align:middle; &#125;</span><br><span class="line">select, input, textarea &#123; font-size:12px; margin:0; &#125;</span><br><span class="line">input[<span class="built_in">type</span>=<span class="string">"text"</span>], input[<span class="built_in">type</span>=<span class="string">"password"</span>], textarea &#123; outline-style:none; -webkit-appearance:none; &#125;</span><br><span class="line">textarea &#123; resize:none; &#125;</span><br><span class="line">table &#123; border-collapse:collapse; &#125;</span><br><span class="line">body &#123; color:<span class="comment">#333; padding:5px 0; font:12px/20px "SimSun","宋体","Arial Narrow",HELVETICA; background:#fff;/* overflow-y:scroll;*/ &#125;</span></span><br><span class="line">.clearfix:after &#123; content:<span class="string">"."</span>; display:block; height:0; visibility:hidden; clear:both; &#125;</span><br><span class="line">.clearfix &#123; zoom:1; &#125;</span><br><span class="line">.clearit &#123; clear:both; height:0; font-size:0; overflow:hidden; &#125;</span><br><span class="line">a &#123; color:<span class="comment">#666; text-decoration:none; &#125;</span></span><br><span class="line">a:visited &#123; color:<span class="comment">#666; &#125;</span></span><br><span class="line">a:hover, a:active, a:focus &#123; color:<span class="comment">#ff8400; text-decoration:underline; &#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="淘宝"><a href="#淘宝" class="headerlink" title="淘宝"></a>淘宝</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td &#123; margin:0; padding:0; &#125;</span><br><span class="line">body, button, input, select, textarea &#123; font:12px/1.5tahoma, arial, \5b8b\4f53; &#125;</span><br><span class="line">h1, h2, h3, h4, h5, h6&#123; font-size:100%; &#125;</span><br><span class="line">address, cite, dfn, em, var &#123; font-style:normal; &#125;</span><br><span class="line">code, kbd, pre, samp &#123; font-family:couriernew, courier, monospace; &#125;</span><br><span class="line">small&#123; font-size:12px; &#125;</span><br><span class="line">ul, ol &#123; list-style:none; &#125;</span><br><span class="line">a &#123; text-decoration:none; &#125;</span><br><span class="line">a:hover &#123; text-decoration:underline; &#125;</span><br><span class="line">sup &#123; vertical-align:text-top; &#125;</span><br><span class="line">sub&#123; vertical-align:text-bottom; &#125;</span><br><span class="line">legend &#123; color:<span class="comment">#000; &#125;</span></span><br><span class="line">fieldset, img &#123; border:0; &#125;</span><br><span class="line">button, input, select, textarea &#123; font-size:100%; &#125;</span><br><span class="line">table &#123; border-collapse:collapse; border-spacing:0; &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="网易"><a href="#网易" class="headerlink" title="网易"></a>网易</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">html &#123;overflow-y:scroll;&#125;</span><br><span class="line">body &#123;margin:0; padding:0; font:12px/1.5 \5b8b\4f53,Arial,sans-serif;/*background:<span class="comment">#ffffff;*/&#125;</span></span><br><span class="line">div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p&#123;padding:0; margin:0;&#125;</span><br><span class="line">table,td,tr,th&#123;font-size:12px;&#125;</span><br><span class="line">ol,ul &#123;list-style:none;&#125;</span><br><span class="line">li&#123;list-style-type:none;&#125;</span><br><span class="line">img&#123;vertical-align:top;border:0;&#125;</span><br><span class="line">h1,h2,h3,h4,h5,h6&#123;font-size:inherit; font-weight:normal;&#125;</span><br><span class="line">address,cite,code,em,th,i&#123;font-weight:normal; font-style:normal;&#125;</span><br><span class="line">.hx a,.hx em,.fB&#123;font-weight:bold;&#125;</span><br><span class="line">.clearfix&#123;*zoom:1;&#125;</span><br><span class="line">.clearfix:after&#123;display:block; overflow:hidden; clear:both; height:0; visibility:hidden; content:<span class="string">"."</span>;&#125;</span><br><span class="line">a &#123;color:<span class="comment">#252525; text-decoration:none;&#125;</span></span><br><span class="line">a:visited &#123;text-decoration:none;&#125;</span><br><span class="line">a:hover &#123;color:<span class="comment">#ba2636;text-decoration:underline;&#125;</span></span><br><span class="line">a:active &#123;color:<span class="comment">#ba2636;&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="搜狐"><a href="#搜狐" class="headerlink" title="搜狐"></a>搜狐</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">/* 全局CSS定义 */</span><br><span class="line">body&#123;font-family:<span class="string">"\5B8B\4F53"</span>,<span class="string">"Arial Narrow"</span>,HELVETICA;text-align:center;margin:0 auto;padding:0;background:<span class="comment">#FFF;font-size:12px;color:#333;&#125;</span></span><br><span class="line">body &gt; div&#123;text-align:center;margin-right:auto;margin-left:auto;&#125; </span><br><span class="line">div,form,ul,ol,li,span,p&#123;margin:0;padding:0;border:0;&#125;</span><br><span class="line">img,a img&#123;border:0;margin:0;padding:0;&#125;</span><br><span class="line">h1,h2,h3,h4,h5,h6&#123;margin:0;padding:0;font-size:12px;font-weight:normal;&#125;</span><br><span class="line">ul,ol,li&#123;list-style:none&#125;</span><br><span class="line">table,td,input&#123;font-size:12px;padding:0&#125;</span><br><span class="line">/* 默认链接颜色 */</span><br><span class="line">a&#123;outline-style:none;color:<span class="comment">#333;text-decoration:none&#125;</span></span><br><span class="line">a:hover&#123;color:<span class="comment">#c00;text-decoration:underline;&#125;</span></span><br><span class="line"> </span><br><span class="line">/*清除链接虚框*/</span><br><span class="line">/*a,area &#123;blr:expression(this.onFocus=this.blur()) &#125;  <span class="keyword">for</span> IE </span><br><span class="line">:focus &#123;-moz-outline-style: none; &#125;  <span class="keyword">for</span> Firefox   </span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
+<h3 id="优酷"><a href="#优酷" class="headerlink" title="优酷"></a>优酷</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">@charset <span class="string">"utf-8"</span>;</span><br><span class="line">article,aside,details,figcaption,figure,footer,header,hgroup,nav,section&#123;display:block&#125;</span><br><span class="line">audio,canvas,video&#123;display:inline-block;*display:inline;*zoom:1&#125;</span><br><span class="line">audio:not([controls])&#123;display:none&#125;</span><br><span class="line">html&#123;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%&#125;</span><br><span class="line">a:focus&#123;outline:thin dotted <span class="comment">#333;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px&#125;</span></span><br><span class="line">a:hover,a:active&#123;outline:0&#125;</span><br><span class="line">figure&#123;padding:0;margin:0&#125;</span><br><span class="line">sub,sup&#123;position:relative;font-size:75%;line-height:0;vertical-align:baseline&#125;</span><br><span class="line">sup&#123;top:-0.5em&#125;</span><br><span class="line">sub&#123;bottom:-0.25em&#125;</span><br><span class="line">img&#123;vertical-align:middle;border:0;-ms-interpolation-mode:bicubic&#125;</span><br><span class="line">button,input,select,textarea&#123;margin:0;font-size:100%;vertical-align:middle&#125;</span><br><span class="line">button,input&#123;*overflow:visible;line-height:normal&#125;</span><br><span class="line">button::-moz-focus-inner,input::-moz-focus-inner&#123;padding:0;border:0&#125;</span><br><span class="line">button,input[<span class="built_in">type</span>=<span class="string">"button"</span>],input[<span class="built_in">type</span>=<span class="string">"reset"</span>],input[<span class="built_in">type</span>=<span class="string">"submit"</span>]&#123;-webkit-appearance:button;cursor:pointer&#125;</span><br><span class="line">input[<span class="built_in">type</span>=<span class="string">"search"</span>]&#123;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;-webkit-appearance:textfield&#125;</span><br><span class="line">input[<span class="built_in">type</span>=<span class="string">"search"</span>]::-webkit-search-decoration,input[<span class="built_in">type</span>=<span class="string">"search"</span>]::-webkit-search-cancel-button&#123;-webkit-appearance:none&#125;</span><br><span class="line">textarea&#123;overflow:auto;vertical-align:top&#125;</span><br><span class="line">ol,ul,dl&#123;list-style:none&#125;</span><br><span class="line">body,p,ol,ul,dl&#123;padding:0;margin:0&#125;</span><br><span class="line">a:link,a:visited&#123;text-decoration:none;color:<span class="comment">#555&#125;</span></span><br><span class="line">a:hover&#123;color:<span class="comment">#c31&#125;</span></span><br><span class="line">a.white&#123;color:<span class="comment">#fff&#125;</span></span><br><span class="line">a.blue&#123;color:<span class="comment">#3399e0&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="美团"><a href="#美团" class="headerlink" title="美团"></a>美团</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">blockquote,body,code,dd,div,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,pre,td,textarea,th,ul&#123;margin:0;padding:0&#125;</span><br><span class="line">table&#123;border-collapse:collapse;border-spacing:0&#125;</span><br><span class="line">fieldset,img&#123;border:0&#125;</span><br><span class="line">address,caption,cite,code,dfn,em,var&#123;font-style:normal;font-weight:400&#125;</span><br><span class="line">li&#123;list-style:none&#125;</span><br><span class="line">caption,th&#123;text-align:left&#125;</span><br><span class="line">h1,h2,h3,h4,h5,h6&#123;font-size:100%&#125;</span><br><span class="line">q:after,q:before&#123;content:<span class="string">''</span>&#125;</span><br><span class="line">abbr,acronym&#123;border:0;font-variant:normal&#125;</span><br><span class="line">sup&#123;vertical-align:text-top&#125;</span><br><span class="line">sub&#123;vertical-align:text-bottom&#125;</span><br><span class="line">input,select,textarea&#123;font-family:inherit;font-size:inherit;*font-size:100%;font-weight:inherit&#125;</span><br><span class="line">legend&#123;color:<span class="comment">#333&#125;html&#123;background-color:#eee&#125;</span></span><br><span class="line">body&#123;font:400 14px/1.5 <span class="string">"Hiragino Sans GB"</span>,<span class="string">"WenQuanYi Micro Hei"</span>,tahoma,sans-serif;color:<span class="comment">#666;background-color:#fff&#125;</span></span><br><span class="line">a&#123;color:<span class="comment">#2bb8aa;text-decoration:none&#125;a:hover&#123;text-decoration:underline&#125;</span></span><br><span class="line">h1,h2,h3,h4,h5,h6&#123;font-family:<span class="string">"Hiragino Sans GB"</span>,<span class="string">" Microsoft YaHei"</span>,<span class="string">"WenQuanYi Micro Hei"</span>,arial,sans-serif;color:<span class="comment">#333;-webkit-font-smoothing:antialiased&#125;</span></span><br><span class="line">input[<span class="built_in">type</span>=password]&#123;font-family:arial,sans-serif&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Meyer"><a href="#Meyer" class="headerlink" title="Meyer"></a>Meyer</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">/* http://meyerweb.com/eric/tools/css/reset/</span><br><span class="line">   v2.0 | 20110126</span><br><span class="line">   License: none (public domain)</span><br><span class="line">*/</span><br><span class="line">html, body, div, span, applet, object, iframe,</span><br><span class="line">h1, h2, h3, h4, h5, h6, p, blockquote, pre,</span><br><span class="line">a, abbr, acronym, address, big, cite, code,</span><br><span class="line">del, dfn, em, img, ins, kbd, q, s, samp,</span><br><span class="line">small, strike, strong, sub, sup, tt, var,</span><br><span class="line">b, u, i, center,</span><br><span class="line">dl, dt, dd, ol, ul, li,</span><br><span class="line">fieldset, form, label, legend,</span><br><span class="line">table, caption, tbody, tfoot, thead, tr, th, td,</span><br><span class="line">article, aside, canvas, details, embed,</span><br><span class="line">figure, figcaption, footer, header, hgroup,</span><br><span class="line">menu, nav, output, ruby, section, summary,</span><br><span class="line">time, mark, audio, video &#123;margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;&#125;</span><br><span class="line">/* HTML5 display-role reset <span class="keyword">for</span> older browsers */</span><br><span class="line">article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section &#123;display: block;&#125;</span><br><span class="line">body &#123;line-height: 1;&#125;</span><br><span class="line">ol, ul &#123;list-style: none;&#125;</span><br><span class="line">blockquote, q &#123;quotes: none;&#125;</span><br><span class="line">blockquote:before, blockquote:after,q:before, q:after &#123;content: <span class="string">''</span>; content: none;&#125;</span><br><span class="line">table &#123;border-collapse: collapse; border-spacing: 0;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="YUI"><a href="#YUI" class="headerlink" title="YUI"></a>YUI</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">/ *</span><br><span class="line">YUI 3.18.1（建f7e7bcb）</span><br><span class="line">版权所有2014年雅虎公司保留所有权利。</span><br><span class="line">在BSD许可。</span><br><span class="line">http://yuilibrary.com/license/</span><br><span class="line">* /</span><br><span class="line"> </span><br><span class="line">html&#123;color:<span class="comment">#000;background:#FFF&#125;</span></span><br><span class="line">body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td&#123;margin:0;padding:0&#125;</span><br><span class="line">table&#123;border-collapse:collapse;border-spacing:0&#125;</span><br><span class="line">fieldset,img&#123;border:0&#125;</span><br><span class="line">address,caption,cite,code,dfn,em,strong,th,var&#123;font-style:normal;font-weight:normal&#125;</span><br><span class="line">ol,ul&#123;list-style:none&#125;</span><br><span class="line">caption,th&#123;text-align:left&#125;</span><br><span class="line">h1,h2,h3,h4,h5,h6&#123;font-size:100%;font-weight:normal&#125;</span><br><span class="line">q:before,q:after&#123;content:<span class="string">''</span>&#125;</span><br><span class="line">abbr,acronym&#123;border:0;font-variant:normal&#125;</span><br><span class="line">sup&#123;vertical-align:text-top&#125;</span><br><span class="line">sub&#123;vertical-align:text-bottom&#125;</span><br><span class="line">input,textarea,select&#123;font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%&#125;</span><br><span class="line">legend&#123;color:<span class="comment">#000&#125;</span></span><br><span class="line"><span class="comment">#yui3-css-stamp.cssreset&#123;display:none&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">@charset <span class="string">"utf-8"</span>;</span><br><span class="line">/* =reset 网页样式重置 </span><br><span class="line">html &#123; font-size:1em;-webkit-tap-highlight-color:rgba(0,0,0,0); -webkit-tap-highlight:rgba(0,0,0,0);-webkit-text-size-adjust:none;overflow:-moz-scrollbars-vertical;/*强制firefox出现滑动条*/&#125; </span><br><span class="line">body &#123; font-size:0.75em;&#125; </span><br><span class="line">label &#123; cursor:pointer;&#125; </span><br><span class="line">a:link, a:visited &#123; text-decoration:none;&#125; </span><br><span class="line">input:focus &#123; outline: none; &#125; </span><br><span class="line">input,button,select,textarea&#123;outline:none;/*-webkit-appearance:none;*//*强制去除表单自带的样式*/ &#125; </span><br><span class="line">textarea&#123;resize:none;/*-webkit-appearance:none;*//*强制去除textarea自带的样式*/ &#125;  </span><br><span class="line">input:-webkit-autofill &#123; -webkit-box-shadow: 0 0 0px 1000px white inset; &#125; /*利用阴影来填充掉input自动填充色*/</span><br><span class="line">textarea,input,select &#123; background: none; border:none; margin: 0; padding: 0; &#125;   </span><br><span class="line">a, abbr, acronym, address, applet, article, aside, audio, b, blockquote, big, body, center, canvas, caption, cite, code, <span class="built_in">command</span>, datalist, dd, del, details, dfn, dl, div, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, keygen, label, legend, li, meter, nav, menu, object, ol, output, p, pre, progress, q, s, samp, section, small, span, <span class="built_in">source</span>, strike, strong, sub, sup, table, tbody, tfoot, thead, th, tr, tdvideo, tt,u, ul, var &#123; margin:0; padding:0;&#125; </span><br><span class="line">article, aside, footer, header, hgroup, nav, section, figure, figcaption &#123; display: block;&#125; /*html5设置*/</span><br><span class="line">h1, h2, h3, h4, h5, h6, th, td, table, input, button, select, textarea, sub&#123; font-size:1em;&#125; </span><br><span class="line">body, input, button, select, textarea, sub&#123; font-family:Arial, sans-serif;&#125; </span><br><span class="line">em, cite, address, optgroup &#123; font-style:normal;&#125; </span><br><span class="line">kbd, samp, code &#123; font-family:monospace;&#125; </span><br><span class="line">img, input, button, select, textarea &#123; vertical-align:middle;outline:none;&#125; </span><br><span class="line">ul, ol &#123; list-style:none;&#125; </span><br><span class="line">img, fieldset &#123; border:0;&#125; </span><br><span class="line">abbr, acronym &#123; cursor:<span class="built_in">help</span>; border-bottom:1px dotted black;&#125; </span><br><span class="line">table &#123; width:100%; border-spacing:0; border:0;&#125; </span><br><span class="line">table th, table td &#123; border:0;&#125; </span><br><span class="line">legend, hr &#123; overflow:hidden; position:absolute; top:0; left:0;&#125; </span><br><span class="line">legend, hr, caption &#123; visibility:hidden; font-size:0; width:0; height:0; line-height:0;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">html&#123;height:100%;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;-webkit-font-smoothing:antialiased;&#125;</span><br><span class="line">body&#123;margin:0;padding:0;background-color:<span class="comment">#fff;min-height:100%;height:auto !important;height:100%;text-align:center;color:#404040;font:12px/1.5 Helvetica,arial;&#125;</span></span><br><span class="line">h1,h2,h3,h4,h5,h6,p,figure,form&#123;margin:0;&#125;</span><br><span class="line">table&#123;border-collapse:collapse; border-spacing:0;&#125;</span><br><span class="line">img&#123;border:0;vertical-align:middle;-ms-interpolation-mode: bicubic;&#125;</span><br><span class="line">a&#123;text-decoration:none;color:<span class="comment">#29B4F0;&#125;</span></span><br><span class="line">a:focus &#123;outline: thin dotted;&#125;</span><br><span class="line">a:hover&#123;color:<span class="comment">#017CB9;text-decoration:underline;&#125;</span></span><br><span class="line">/* hn */</span><br><span class="line">h1&#123;font-size:16px;line-height:36px;&#125;</span><br><span class="line">h2&#123;font-size:14px;line-height:30px;&#125;</span><br><span class="line">h3&#123;line-height:24px;&#125;</span><br><span class="line">h3,h4,h5,h6&#123;font-size:12px;&#125;</span><br><span class="line">/* ul ol dl */</span><br><span class="line">ul,li,ol&#123;margin: 0;padding:0;list-style: none outside none;&#125;</span><br><span class="line">ul.has-style li,ol li&#123;margin-left:25px;&#125;</span><br><span class="line">ul.has-style li&#123;list-style:disc;&#125;</span><br><span class="line">ol li&#123;list-style:decimal;&#125;</span><br><span class="line">ul.inline-style li&#123;<span class="built_in">float</span>:left;display:inline;&#125;</span><br><span class="line">dl&#123;margin-bottom: 18px;&#125;</span><br><span class="line">dt&#123;font-weight: bold;&#125;</span><br><span class="line">dd&#123;margin:0 0 0 9px;padding:0;&#125;</span><br><span class="line">svg:not(:root) &#123; overflow: hidden;&#125;</span><br><span class="line">/* clearfix */</span><br><span class="line">.clearfix:before, .clearfix:after &#123;content:<span class="string">""</span>; display:table;&#125;</span><br><span class="line">.clearfix:after&#123;clear:both;overflow:hidden;&#125;</span><br><span class="line">.clearfix&#123;zoom:1;&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/02/JavaScript数组方法/" rel="next" title="JavaScript 数组方法">
+                <i class="fa fa-chevron-left"></i> JavaScript 数组方法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Restart-H</p>
+              <p class="site-description motion-element" itemprop="description">黎明就在眼前</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Restart-H" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#腾讯"><span class="nav-number">1.</span> <span class="nav-text">腾讯</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#百度"><span class="nav-number">2.</span> <span class="nav-text">百度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新浪"><span class="nav-number">3.</span> <span class="nav-text">新浪</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#淘宝"><span class="nav-number">4.</span> <span class="nav-text">淘宝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网易"><span class="nav-number">5.</span> <span class="nav-text">网易</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#搜狐"><span class="nav-number">6.</span> <span class="nav-text">搜狐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优酷"><span class="nav-number">7.</span> <span class="nav-text">优酷</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#美团"><span class="nav-number">8.</span> <span class="nav-text">美团</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Meyer"><span class="nav-number">9.</span> <span class="nav-text">Meyer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#YUI"><span class="nav-number">10.</span> <span class="nav-text">YUI</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Restart-H</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

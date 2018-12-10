@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="拂晓">
 <meta property="og:description" content="以下内容来自：https://www.cnblogs.com/fengxiongZz/p/8191503.html  ES6箭头函数  当要求动态上下文的时候，就不能够使用箭头函数，也就是   this 的固定化  在使用 ()=&amp;gt;{} 定义函数的时候，this 的指向是定义时所在的对象，而不是使用时所在的对象 不能够用作构造函数，即不能够使用 new 命令，否则就会抛出一个错误 不能够使">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-24T18:00:06.349Z">
+<meta property="og:updated_time" content="2018-12-01T22:01:57.420Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端开发面试题--JavaScript(一)">
 <meta name="twitter:description" content="以下内容来自：https://www.cnblogs.com/fengxiongZz/p/8191503.html  ES6箭头函数  当要求动态上下文的时候，就不能够使用箭头函数，也就是   this 的固定化  在使用 ()=&amp;gt;{} 定义函数的时候，this 的指向是定义时所在的对象，而不是使用时所在的对象 不能够用作构造函数，即不能够使用 new 命令，否则就会抛出一个错误 不能够使">
@@ -187,6 +187,26 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
           </a>
         </li>
       
@@ -370,7 +390,10 @@
 <h4 id="Class-语法"><a href="#Class-语法" class="headerlink" title="Class 语法"></a>Class 语法</h4><p>class 语法相对<code>原型</code>, <code>构造函数</code>, <code>继承</code>更接近传统语法, 它的写法能够让对象原型的写法更加<code>清晰</code>, 更加<code>通俗</code><br>ex:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">class Animal&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span></span>()&#123;</span><br><span class="line">    this.type=<span class="string">'Lucy'</span>;</span><br><span class="line">	&#125;</span><br><span class="line">  say(val)&#123;</span><br><span class="line">      setTimeout(()=&gt;&#123;</span><br><span class="line">      console.log(this);</span><br><span class="line">      console.log(this.type + <span class="string">" says "</span> + val)</span><br><span class="line">    &#125;,1000)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">let</span> animal = new Animal();</span><br><span class="line">animal.say(<span class="string">'hai'</span>); // Lucy says hai</span><br><span class="line"></span><br><span class="line">class Cat extends Animal &#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span></span>()&#123;</span><br><span class="line">    super()</span><br><span class="line">    this.type = <span class="string">"cat"</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">let</span> cat = new Cat();</span><br><span class="line">cat.say(<span class="string">'hai'</span>); //cat says hai</span><br></pre></td></tr></table></figure></p>
 <p>使用 <code>extend</code> 的时候结构输出是 cat says hello 而不是animal says hello, 说明 <code>contructor</code> 内部定义的方法和属性是实例对象自己的, 不能通过 <code>extends</code> 进行继承;<br>在 class cat 中出现了 <code>super()</code>, 是因为在 ES6 中，子类的构造函数必须含有 super 函数, super 表示的是调用父类的构造函数, 虽然是父类的构造函数, 但是 this 指向的却是 cat </p>
 <h4 id="模板字符串"><a href="#模板字符串" class="headerlink" title="模板字符串"></a>模板字符串</h4><p>${ varible }, 以往连接字符串和变量的时候需要使用字符串拼接 <code>&#39;string&#39; + varible + &#39;string&#39;</code> 但是有了模版语言后我们可以使用 string${varible}string 进行<code>简化</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//es5 </span><br><span class="line">var name = <span class="string">'Tom'</span>;</span><br><span class="line">console.log(<span class="string">'hello '</span> + name); // hello Tom</span><br><span class="line"></span><br><span class="line">var tem = <span class="string">'hello \</span></span><br><span class="line"><span class="string">world'</span>; </span><br><span class="line">console.log(tem); // hello world</span><br><span class="line"></span><br><span class="line">//es6</span><br><span class="line">const name = <span class="string">'Tom'</span>;</span><br><span class="line">console.log(`hello <span class="variable">$&#123;name&#125;</span>`); //hello Tom</span><br><span class="line"></span><br><span class="line">const tem = `hello</span><br><span class="line">world`;</span><br><span class="line">console.log(tem); // hello 换行 world</span><br></pre></td></tr></table></figure></p>
-
+<h4 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h4><p>  Promise 是<code>异步编程</code>的一种解决方案, 比传统的解决方案(<code>回调函数</code>和<code>事件</code>)更加合理, 强大; 所谓 Promise, 简单说就是一个容器, 里面保存着某个未来才会结束的事件(通常是一个异步操作) 的结果. 从语法上说, Promise 是一个<code>对象</code>, 他可以获取异步操作的消息. Promise 提供<code>统一的 API</code>, 各<br>  种异步操作都可以用同样的方法进行处理<br>面试套路 1. 手写一个 promise<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var promise = new Promise((resolve, reject)=&gt;&#123;</span><br><span class="line">  <span class="keyword">if</span> ( 操作成功 )&#123;</span><br><span class="line">    resolve(value)</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    reject(error)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">promise.then(<span class="keyword">function</span> (value)&#123;</span><br><span class="line">  // success</span><br><span class="line">&#125;,<span class="keyword">function</span>(value)&#123;</span><br><span class="line">  // failure</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>面试套路 2. 怎么解决回调函数里面回调另一个函数, 另一个函数的<code>参数</code>需要<code>依赖</code>这个回调函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$http</span>.get(url)</span><br><span class="line">     .success(<span class="keyword">function</span>(res)&#123;</span><br><span class="line">        <span class="keyword">if</span> (success != undefined)&#123;</span><br><span class="line">          success(res)</span><br><span class="line">        &#125;</span><br><span class="line">     &#125;)</span><br><span class="line">     .error(<span class="keyword">function</span>(res)&#123;</span><br><span class="line">       <span class="keyword">if</span> (error != undefined)&#123;</span><br><span class="line">         error(res)</span><br><span class="line">       &#125;</span><br><span class="line">     &#125;)</span><br><span class="line"><span class="keyword">function</span> success(data)&#123;</span><br><span class="line">  <span class="keyword">if</span> ( data.id != 0 )&#123;</span><br><span class="line">    var url = `getdata/data?id=<span class="variable">$&#123; data.id &#125;</span>`;</span><br><span class="line">    <span class="variable">$http</span>.get(url)</span><br><span class="line">         .success(<span class="keyword">function</span>( res )&#123;</span><br><span class="line">           showData(res)</span><br><span class="line">         &#125;)</span><br><span class="line">         .error(<span class="keyword">function</span>(res)&#123;</span><br><span class="line">           <span class="keyword">if</span> ( error != undefined )&#123;</span><br><span class="line">             error(res)</span><br><span class="line">           &#125;</span><br><span class="line">         &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">```bash</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">```bash</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -493,7 +516,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -503,10 +526,10 @@
               
               
               <div class="site-state-item site-state-categories">
-                
-                  <span class="site-state-item-count">5</span>
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">分类</span>
-                
+                </a>
               </div>
             
 
@@ -514,10 +537,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">6</span>
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
@@ -558,7 +581,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#ES6"><span class="nav-number">1.</span> <span class="nav-text">ES6</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#箭头函数"><span class="nav-number">1.1.</span> <span class="nav-text">箭头函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#let和const"><span class="nav-number">1.2.</span> <span class="nav-text">let和const</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Set-数据结构"><span class="nav-number">1.3.</span> <span class="nav-text">Set 数据结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Class-语法"><span class="nav-number">1.4.</span> <span class="nav-text">Class 语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模板字符串"><span class="nav-number">1.5.</span> <span class="nav-text">模板字符串</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#ES6"><span class="nav-number">1.</span> <span class="nav-text">ES6</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#箭头函数"><span class="nav-number">1.1.</span> <span class="nav-text">箭头函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#let和const"><span class="nav-number">1.2.</span> <span class="nav-text">let和const</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Set-数据结构"><span class="nav-number">1.3.</span> <span class="nav-text">Set 数据结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Class-语法"><span class="nav-number">1.4.</span> <span class="nav-text">Class 语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模板字符串"><span class="nav-number">1.5.</span> <span class="nav-text">模板字符串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise"><span class="nav-number">1.6.</span> <span class="nav-text">Promise</span></a></li></ol></li></ol></div>
             
 
           </div>

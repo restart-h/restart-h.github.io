@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="JavaScript,函数,Array,方法,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="数组方法Array.from(arrLike[, mapFn[, thisArg]])从一个类似数组或可迭代对象中创建一个新的数组实例 参数arrayLike: 想要转换成数组的伪数组对象或可迭代对象mapFn (可选参数): 如果指定了该参数，新数组中的每个元素会执行该回调函数thisArg (可选参数): 可选参数，执行回调函数 mapFn 时 this 对象 返回值一个新的数组实例 示例St">
+<meta name="keywords" content="JavaScript,函数,Array,方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript 数组方法">
+<meta property="og:url" content="http://restart-h.github.io/2018/12/02/JavaScript数组方法/index.html">
+<meta property="og:site_name" content="拂晓">
+<meta property="og:description" content="数组方法Array.from(arrLike[, mapFn[, thisArg]])从一个类似数组或可迭代对象中创建一个新的数组实例 参数arrayLike: 想要转换成数组的伪数组对象或可迭代对象mapFn (可选参数): 如果指定了该参数，新数组中的每个元素会执行该回调函数thisArg (可选参数): 可选参数，执行回调函数 mapFn 时 this 对象 返回值一个新的数组实例 示例St">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-10T21:17:39.459Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript 数组方法">
+<meta name="twitter:description" content="数组方法Array.from(arrLike[, mapFn[, thisArg]])从一个类似数组或可迭代对象中创建一个新的数组实例 参数arrayLike: 想要转换成数组的伪数组对象或可迭代对象mapFn (可选参数): 如果指定了该参数，新数组中的每个元素会执行该回调函数thisArg (可选参数): 可选参数，执行回调函数 mapFn 时 this 对象 返回值一个新的数组实例 示例St">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://restart-h.github.io/2018/12/02/JavaScript数组方法/">
+
+
+
+
+
+  <title>JavaScript 数组方法 | 拂晓</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">拂晓</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://restart-h.github.io/2018/12/02/JavaScript数组方法/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Restart-H">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="拂晓">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JavaScript 数组方法</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-02T16:05:47+08:00">
+                2018-12-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/数组/" itemprop="url" rel="index">
+                    <span itemprop="name">数组</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="数组方法"><a href="#数组方法" class="headerlink" title="数组方法"></a>数组方法</h3><h4 id="Array-from-arrLike-mapFn-thisArg"><a href="#Array-from-arrLike-mapFn-thisArg" class="headerlink" title="Array.from(arrLike[, mapFn[, thisArg]])"></a>Array.from(arrLike[, mapFn[, thisArg]])</h4><p>从一个类似数组或可迭代对象中创建一个新的数组实例</p>
+<h5 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h5><p><code>arrayLike</code>: 想要转换成数组的<code>伪数组对象</code>或<code>可迭代对象</code><br><code>mapFn</code> (可选参数): 如果指定了该参数，新数组中的每个元素会执行该回调函数<br><code>thisArg</code> (可选参数): 可选参数，执行回调函数 mapFn 时 this 对象</p>
+<h5 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h5><p>一个<code>新的数组实例</code></p>
+<h5 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h5><h6 id="String"><a href="#String" class="headerlink" title="String"></a>String</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Array.from(<span class="string">'foo'</span>); </span><br><span class="line">// [<span class="string">"f"</span>, <span class="string">"o"</span>, <span class="string">"o"</span>]</span><br></pre></td></tr></table></figure>
+<h6 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> s = new Set([<span class="string">'foo'</span>, window]); </span><br><span class="line">Array.from(s); </span><br><span class="line">// [<span class="string">"foo"</span>, window]</span><br></pre></td></tr></table></figure>
+<h6 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> m = new Map([[1, 2], [2, 4], [4, 8]]);</span><br><span class="line">Array.from(m); </span><br><span class="line">// [[1, 2], [2, 4], [4, 8]]</span><br></pre></td></tr></table></figure>
+<h6 id="arguments"><a href="#arguments" class="headerlink" title="arguments"></a>arguments</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">f</span></span>() &#123;</span><br><span class="line">  <span class="built_in">return</span> Array.from(arguments);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">f(1, 2, 3);</span><br><span class="line">// [1, 2, 3]</span><br></pre></td></tr></table></figure>
+<h6 id="Array-from-中使用箭头函数"><a href="#Array-from-中使用箭头函数" class="headerlink" title="Array.from 中使用箭头函数"></a>Array.from 中使用箭头函数</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Array.from([1, 2, 3], x =&gt; x + x);  </span><br><span class="line">// x =&gt; x + x代表这是一个函数，只是省略了其他的定义，这是一种Lambda表达式的写法</span><br><span class="line">// 箭头的意思表示从当前数组中取出一个值，然后自加，并将返回的结果添加到新数组中    </span><br><span class="line">// [2, 4, 6]</span><br><span class="line"></span><br><span class="line">// Generate a sequence of numbers</span><br><span class="line">// Since the array is initialized with `undefined` on each position,</span><br><span class="line">// the value of `v` below will be `undefined`</span><br><span class="line">Array.from(&#123;length: 5&#125;, (v, i) =&gt; i);</span><br><span class="line">// [0, 1, 2, 3, 4]</span><br></pre></td></tr></table></figure>
+<h6 id="数组去重合并"><a href="#数组去重合并" class="headerlink" title="数组去重合并"></a>数组去重合并</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">combine</span></span>()&#123; </span><br><span class="line">    <span class="built_in">let</span> arr = [].concat.apply([], arguments);  //没有去重复的新数组 </span><br><span class="line">    <span class="built_in">return</span> Array.from(new Set(arr));</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">var m = [1, 2, 2], n = [2,3,3]; </span><br><span class="line">console.log(combine(m,n));</span><br></pre></td></tr></table></figure>
+<h4 id="Array-isArray-obj"><a href="#Array-isArray-obj" class="headerlink" title="Array.isArray(obj)"></a>Array.isArray(obj)</h4><p>用于确定传递的值是否是一个 Array</p>
+<h5 id="参数-1"><a href="#参数-1" class="headerlink" title="参数"></a>参数</h5><p><code>obj</code>: 需要检测的值</p>
+<h5 id="返回值-1"><a href="#返回值-1" class="headerlink" title="返回值"></a>返回值</h5><p>如果对象是 Array，则为 <code>true</code>; 否则为 <code>false</code></p>
+<h5 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">// 下面的函数调用都返回 <span class="literal">true</span></span><br><span class="line">Array.isArray([]);</span><br><span class="line">Array.isArray([1]);</span><br><span class="line">Array.isArray(new Array());</span><br><span class="line">// 鲜为人知的事实：其实 Array.prototype 也是一个数组。</span><br><span class="line">Array.isArray(Array.prototype); </span><br><span class="line"></span><br><span class="line">// 下面的函数调用都返回 <span class="literal">false</span></span><br><span class="line">Array.isArray();</span><br><span class="line">Array.isArray(&#123;&#125;);</span><br><span class="line">Array.isArray(null);</span><br><span class="line">Array.isArray(undefined);</span><br><span class="line">Array.isArray(17);</span><br><span class="line">Array.isArray(<span class="string">'Array'</span>);</span><br><span class="line">Array.isArray(<span class="literal">true</span>);</span><br><span class="line">Array.isArray(<span class="literal">false</span>);</span><br><span class="line">Array.isArray(&#123; __proto__: Array.prototype &#125;);</span><br></pre></td></tr></table></figure>
+<h5 id="instanceof-和-isArray"><a href="#instanceof-和-isArray" class="headerlink" title="instanceof 和 isArray"></a>instanceof 和 isArray</h5><p>当检测 Array 实例时, Array.isArray 优于 instanceof, 因为 Array.isArray 能检测 iframes.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var iframe = document.createElement(<span class="string">'iframe'</span>);</span><br><span class="line">document.body.appendChild(iframe);</span><br><span class="line">xArray = window.frames[window.frames.length-1].Array;</span><br><span class="line">var arr = new xArray(1,2,3); // [1,2,3]</span><br><span class="line"></span><br><span class="line">// Correctly checking <span class="keyword">for</span> Array</span><br><span class="line">Array.isArray(arr);  // <span class="literal">true</span></span><br><span class="line">// Considered harmful, because doesn\<span class="string">'t work though iframes</span></span><br><span class="line"><span class="string">arr instanceof Array; // false</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="Array-of"><a href="#Array-of" class="headerlink" title="Array.of()"></a>Array.of()</h4><p>创建一个具有可变数量参数的新数组实例，而不考虑参数的数量或类型</p>
+<h5 id="参数-2"><a href="#参数-2" class="headerlink" title="参数"></a>参数</h5><p>任意个参数</p>
+<h5 id="返回值-2"><a href="#返回值-2" class="headerlink" title="返回值"></a>返回值</h5><p>新的 Array 实例<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Array.of(7);       // [7] </span><br><span class="line">Array.of(1, 2, 3); // [1, 2, 3]</span><br><span class="line"></span><br><span class="line">Array(7);          // [ , , , , , , ]</span><br><span class="line">Array(1, 2, 3);    // [1, 2, 3]</span><br><span class="line"></span><br><span class="line">Array.of(1, 2, 3);   // [1, 2, 3]</span><br><span class="line">Array.of(undefined); // [undefined]</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/tags/函数/" rel="tag"># 函数</a>
+          
+            <a href="/tags/Array/" rel="tag"># Array</a>
+          
+            <a href="/tags/方法/" rel="tag"># 方法</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/25/input样式重置/" rel="next" title="input样式重置">
+                <i class="fa fa-chevron-left"></i> input样式重置
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/08/css样式重置/" rel="prev" title="css样式重置">
+                css样式重置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Restart-H</p>
+              <p class="site-description motion-element" itemprop="description">黎明就在眼前</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Restart-H" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#数组方法"><span class="nav-number">1.</span> <span class="nav-text">数组方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Array-from-arrLike-mapFn-thisArg"><span class="nav-number">1.1.</span> <span class="nav-text">Array.from(arrLike[, mapFn[, thisArg]])</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#参数"><span class="nav-number">1.1.1.</span> <span class="nav-text">参数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#返回值"><span class="nav-number">1.1.2.</span> <span class="nav-text">返回值</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#示例"><span class="nav-number">1.1.3.</span> <span class="nav-text">示例</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#String"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">String</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Set"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">Set</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Map"><span class="nav-number">1.1.3.3.</span> <span class="nav-text">Map</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#arguments"><span class="nav-number">1.1.3.4.</span> <span class="nav-text">arguments</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Array-from-中使用箭头函数"><span class="nav-number">1.1.3.5.</span> <span class="nav-text">Array.from 中使用箭头函数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#数组去重合并"><span class="nav-number">1.1.3.6.</span> <span class="nav-text">数组去重合并</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Array-isArray-obj"><span class="nav-number">1.2.</span> <span class="nav-text">Array.isArray(obj)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#参数-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">参数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#返回值-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">返回值</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#示例-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#instanceof-和-isArray"><span class="nav-number">1.2.4.</span> <span class="nav-text">instanceof 和 isArray</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Array-of"><span class="nav-number">1.3.</span> <span class="nav-text">Array.of()</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#参数-2"><span class="nav-number">1.3.1.</span> <span class="nav-text">参数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#返回值-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">返回值</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Restart-H</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
